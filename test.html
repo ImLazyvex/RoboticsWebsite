@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="Style.css">
+        <title>
+            Robotics
+        </title>
+    </head>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html">Home</a>
+      <a href="design.html">Design</a>
+      <a href="coding.html">Coding</a>
+      <a href="building.html">Building</a>
+      <a href="controlling.html">Controlling</a>
+    </div>
+    
+    <h2>Animated Sidenav Example</h2>
+    <p>Click on the element below to open the side navigation menu.</p>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+    
+    
+    <body style="background-color:rgb(36, 182, 231);">
+      <script>
+        function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+        function openTask(task, button, color) {
+          var tab = document.getElementsByClassName("tabcontent");
+          for (var i=0; i<tab.length; i++) {
+            tab[i].style.display="none";
+          }
+          var tab2 = document.getElementsByClassName("tablink");
+          for (var i=0; i<tab2.length; i++) {
+            tab2[i].style.backgroundColor="";
+          }
+          var tab3 = document.getElementsByClassName("explanation");
+          for (var i=0; i<tab3.length; i++) {
+            tab3[i].style.display="none";
+          }
+          document.getElementById(task).style.display = "block";
+          button.style.backgroundColor=color;
+        }
+        document.getElementById("default").click();
+      </script>
+      
+      <div id ="Design" class="tabcontent">
+        <h1>Design</h1>
+        <p>Designing a robot using CAD allows you to imagine and test different robot designs on a computer before building the real thing.</p>
+      </div>
+      <div id ="Coding" class="tabcontent">
+        <h1>Coding</h1>
+        <p>Coding robots involves programming instructions that enable intelligent automation and decision-making.</p>
+      </div>
+      <div id ="Building" class="tabcontent">
+        <h1>Building</h1>
+        <p>Building robots with parts is like assembling a cool robot puzzle with special parts that have their own role.</p>
+      </div>
+      <div id ="Controlling" class="tabcontent">
+        <h1>Controlling</h1>
+        <p>Without a driver, who is going to make the robot move?</p>
+      </div>
+      <button class="tablink" onclick="openTask('Design', this, 'red')" id="default">Design</button>
+      <button class="tablink" onclick="openTask('Coding', this, 'green')">Coding</button>
+      <button class="tablink" onclick="openTask('Building', this, 'blue')">Building</button>
+      <button class="tablink" onclick="openTask('Controlling', this, 'orange')">Controlling</button>
+
+      <div class="homeimages">
+      <a href= "design.html"><img src="ImagesForRobot/DesigningImageForWebsite.png" style="width:24.75%; height:300px;"></a>
+      <a href= "coding.html"><img src="ImagesForRobot/CodingImageForWebsite.jpg" style="width:24.75%; height:300px;"></a>
+      <a href= "building.html"><img src="ImagesForRobot/BuildingImageForWebsite.jpg" style="width:24.75%; height:300px;"></a>
+      <a href= "controlling.html"><img src="ImagesForRobot/ControllerImage2.jpg" style="width:24.75%; height:300px;"></a>
+      </div>
+      <!--<div id="Coding">
+        <p>
+          Coding is like the special code language that tells robots what to do. It's like giving them a set of instructions to follow. Imagine if you could write down steps for your robot friend to follow, like "go forward 3 steps" or "turn left." That's what coding does for robots. Coding is super important because it's what makes robots smart and useful. Without coding, robots would just be machines that don't know what to do. But when you code them, they can do all sorts of cool stuff! They can pick up things, move around, and even solve problems. You can make a robot vacuum your room or help doctors in a hospital. The really neat thing is that coding lets you customize robots. You can make them do exactly what you want, kind of like teaching them your own tricks. And that's not all – coding also makes robots do jobs that might be dangerous for people, like going into spaces too small for humans or handling risky materials. So, coding is like the magic wand that brings robots to life. It's how you tell them what to do and make them do amazing things. With coding, robots become like your awesome helpers, doing tasks that make life easier and safer for everyone.
+        </p>
+      </div>
+      <div id="Building">
+        <p>
+          Building is like creating a home or a body for a robot, and it's super important because it gives robots a physical form and structure. Just like we need bones and muscles to move around, robots need a sturdy framework to hold all their parts together. When we build robots, we're like inventors making sure they have the right body to do their jobs. When we build robots, we're not just slapping things together randomly. We follow plans, kind of like following a recipe, to make sure all the parts fit perfectly. Imagine if a robot's arm was too loose or its wheels didn't stay on – it wouldn't work right! Building also involves choosing the right materials, just like how we pick the best stuff for building houses or making crafts. The cool thing is that building robots lets us customize them for specific tasks. We can design a robot to have arms that can pick up objects or sensors that help it see and hear. Plus, building robots can make things safer for us. For example, robots can be sent to dangerous places where it's not safe for people to go, like exploring deep oceans or checking out disaster zones. So, building robots is like giving them a body and making sure they're ready to tackle all sorts of jobs. It's a bit like being a mad scientist, creating amazing machines that can help us in all sorts of exciting ways!
+        </p>
+      </div>
+      <div id="Design">
+        <p>
+          Designing for a robot is like making a detailed roadmap before you start building it, and it's super important because it ensures the robot turns out just the way we envision. When we design a robot, we're like architects drawing up plans for a new building. We decide where each part should be placed, how they fit together, and what the robot's abilities will be. Imagine you're making a recipe for a delicious meal. Designing a robot is similar – we plan out the ingredients (parts) and the steps (functions) carefully. It's not only about how the robot looks, but also how it functions. We consider factors like how it senses its surroundings, how it moves, and how it completes its tasks effectively. Designing matters because it prevents mistakes and confusion. Picture trying to build something without instructions – it could end up all mixed up! Similarly, designing a robot's blueprint guarantees that we use the right components and assemble them correctly. Plus, it helps different team members collaborate smoothly, like musicians following the same sheet music. In essence, designing a robot is like setting the foundation for an exciting project. It's the crucial first step in creating something incredible that can assist people, explore new frontiers, and potentially make a positive impact on the world!
+        </p>
+      </div> 
+      <div id = "Controlling">
+        <p>
+          Driving a robot is like being its remote control, allowing us to guide its movements, and it's really important because it gives us the ability to make the robot do specific tasks exactly as we want rather than making mistakes while being driven by code. When a robot can be driven, it's like being in the driver's seat of a car, except you're steering the robot's actions. Imagine driving a toy car with a remote control. You press buttons, and the car goes forward, backward, left, or right. Designing the driving aspect of a robot's blueprint is like creating a way for us to send signals to the robot through buttons and radios, telling it when and how to move its wheels, gears, or any other parts. And it's not just about basic directions – we can control its speed, precision, and even its interactions with objects. Driving is important because it gives us the power to use robots for specific tasks that require human-like control. Instead of a robot moving randomly, we can navigate it through complex environments, manipulate objects with precision, and perform tasks that need careful handling. The basic description of driving a robot is like being its commander, directing its actions with precision. It's like playing a video game, but the robot is the character you control, helping it accomplish tasks and missions effectively.
+        </p>
+      </div>
+    </div>-->
+    </body>
+    <footer>
+        <p>
+            &copy;2023 Rushil's Websites All Rights Reserved
+        </p>
+    </footer>
+</html>
+
+

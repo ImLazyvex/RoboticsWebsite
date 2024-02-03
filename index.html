@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="Style.css">
+<script src ="script.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+#Design {background-color:red;}
+#Coding {background-color:green;}
+#Building {background-color:blue;}
+#Controlling {background-color:orange;}
+</style>
+</head>
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="design.html">Design</a>
+        <a href="coding.html">Coding</a>
+        <a href="building.html">Building</a>
+        <a href="controlling.html">Controlling</a>
+      </div>
+      
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Navigation</span>
+
+<div id="Design" class="tabcontent">
+  <h1>Design</h1>
+  <p>Designing a robot using CAD allows you to imagine and test different robot designs on a computer before building the real thing.</p>
+</div>
+
+<div id="Coding" class="tabcontent">
+  <h1>Coding</h1>
+  <p>Coding robots involves programming instructions that enable intelligent automation and decision-making.</p>
+</div>
+
+<div id="Building" class="tabcontent">
+  <h1>Building</h1>
+  <p>Building robots with parts is like assembling a cool robot puzzle with special parts that have their own role.</p>
+</div>
+
+<div id="Controlling" class="tabcontent">
+  <h1>Controlling</h1>
+  <p>Without a driver, who is going to make the robot move?</p>
+</div>
+
+<button class="tablink" onclick="openCity('Design', this, 'red')" id="defaultOpen">Design</button>
+<button class="tablink" onclick="openCity('Coding', this, 'green')">Coding</button>
+<button class="tablink" onclick="openCity('Building', this, 'blue')">Building</button>
+<button class="tablink" onclick="openCity('Controlling', this, 'orange')">Controlling</button>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+function openCity(cityName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+<p style = "font-size: 20px;color:gray; padding-top:10px; ">Creating a robot is a multi-step process. It begins with designing the robot's look and how it will work, followed by writing the code that tells it what to do. After that, you actually build the robot with all its physical parts. Lastly, you control the robot by running the code, whether it's through remote control or letting it make decisions on its own, while constantly refining and testing the design to make sure it works as planned.</p>
+<div>
+  <img src="ImagesForRobot/DesigningImageForWebsite.png" style="width:24.75%; height:300px;"></a>
+  <img src="ImagesForRobot/CodingImageForWebsite.jpg" style="width:24.75%; height:300px;"></a>
+  <img src="ImagesForRobot/BuildingImageForWebsite.jpg" style="width:24.75%; height:300px;"></a>
+  <img src="ImagesForRobot/ControllerImage2.jpg" style="width:24.75%; height:300px;"></a>
+</div>
+</body>
+</html> 
